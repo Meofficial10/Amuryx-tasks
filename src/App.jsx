@@ -6,7 +6,7 @@ import AuthForm from "./components/AuthForm";
 function App() {
   return (
     <div>
-      {/* Pass AuthForm as children to AuthLayout */}
+      {/* Put AuthForm inside AuthLayout box */}
       <AuthLayout>
         <AuthForm />
       </AuthLayout>
