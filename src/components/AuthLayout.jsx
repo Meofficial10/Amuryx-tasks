@@ -7,7 +7,7 @@ export function AuthLayout(){
                 <div className="hidden md:flex flex-1 items-center justify-center relative"> 
                     {/*left*/}
                     <div className="relative w-full max-w-[400px] z-10">
-                        <img src="src/assets/image.png" alt="Security image" className=" h-auto" />{/* img */}
+                        <img src="src/assets/image.png" alt="Security image" className=" h-auto" />
                     </div>
 
                     {/* Glow Shape*/}
