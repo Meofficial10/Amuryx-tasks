@@ -3,7 +3,7 @@ import Spinner from "./Spinner";
 
 export function LoginForm({ setRegister, users, setCurrentUser }) {
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+   const [error, setError] = useState("");
 
   const initialStateErrors = {
     email: { required: false },
@@ -16,8 +16,8 @@ export function LoginForm({ setRegister, users, setCurrentUser }) {
     password: "",
   });
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = (event) => {
+    event.preventDefault();
     setError("");
 
     let errors = initialStateErrors;
@@ -33,7 +33,7 @@ export function LoginForm({ setRegister, users, setCurrentUser }) {
     if (inputs.email && inputs.password) {
       setIsLoading(true);
       setTimeout(() => {
-        // Logic: Find user in the array
+        // Find user in the array
         const foundUser = users.find(
           (u) => u.email === inputs.email && u.password === inputs.password
         );
@@ -58,7 +58,7 @@ export function LoginForm({ setRegister, users, setCurrentUser }) {
       {/* header container */}
       <div className="flex flex-col gap-5">
         <h1 className="text-5xl font-semibold">Sign</h1>
-        <p className="text-sm text-gray-400 w-90">
+        <p className="text-sm text-gray-400 w-full max-w-xs sm:max-w-sm">
           Welcome to Mate Family. Please login with your personal account
           information letter.
         </p>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Spinner from "./Spinner"; // Added import use
+import Spinner from "./Spinner"; 
 
 export function RegisterForm({ setRegister, setUsers, users  }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -7,14 +7,14 @@ export function RegisterForm({ setRegister, setUsers, users  }) {
     name: { required: false },
     email: { required: false },
     password: { required: false },
-    customError: null,
+    
   };
 
   const [errors, setErrors] = useState(initialStateErrors);
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
-    password: "",
+    password: ""
   });
 
   const handleSubmit = (event) => {
@@ -34,7 +34,7 @@ export function RegisterForm({ setRegister, setUsers, users  }) {
     if (inputs.name && inputs.email && inputs.password) {
       setIsLoading(true);
       setTimeout(() => {
-        // Add the new user to the global list
+
         setUsers([...users, inputs]);
         setIsLoading(false);
         setRegister(false); // Send them to login page after success
@@ -50,7 +50,7 @@ export function RegisterForm({ setRegister, setUsers, users  }) {
     <div className="flex flex-1 flex-col justify-center text-white gap-6">
       <div className="flex flex-col gap-5">
         <h1 className="text-5xl font-semibold">Register</h1>
-        <p className="text-sm text-gray-400 w-90">
+        <p className="text-sm text-gray-400 w-full max-w-xs sm:max-w-sm">
           Welcome to Mate Family. Please Register with your personal account
           information letter.
         </p>
